@@ -8,7 +8,7 @@ Objetivo | `Melhorar a visualizacao do diagnostico e dos sintomas`
 Interface | `public interface IVisualizacao`
 ~~~
 public interface IVisualizacao {
-  String[] doencPaciente();
+  String[] doencaPaciente();
   String[][] matrizDoencas();
 }
 ~~~
@@ -20,8 +20,8 @@ public interface IVisualizacao {
 
 Método | Objetivo
 -------| --------
-`quarentena` | `Entra em quarentena se o paciente tem uma doença altamente contagiosa return true; se o paciente deve ser colocado em quarentena return false; se nao`
-`escolhePergunta` | `Escolhe a proxima pergunta baseada em um sitoma anterior return proxPergunta; Elimina linhas conforme os sintomas analizados nao estao presentes naquelas, e analiza apenas as colunas em que os sintomas variam`
-`sinalizaSintomas` | `Conforme descobre sintomas sao sinalizdos em 	uma imagem de um zumbi return parteDoCorpo; a ser sinalizada`
-`suavizaMaNoticia` | `Randomiza modos de dar uma noticia ruim ao paciente e retorna um deles return noticia;`	
-`tratamentoSintomatico` | `DÍevolve um tratameneto para sintomas especificos (amenizar desconforto) ex: febre - dipirona/banho gelado`	
+`quarentena` | `Determina se o paciente deve ou nao entrar em quarentena analisando a doenca que ele apresenta. Se a doença for altamente contagiosa returna true se nao returna false`
+`escolhePergunta` | `Escolhe a proxima pergunta baseada em um sintoma anterior return proxPergunta; Elimina linhas conforme os sintomas analizados nao estao presentes naquelas, e analiza apenas as colunas em que os sintomas variam`
+`sinalizaSintomas` | `Conforme descobre sintomas sao sinalizdos em uma imagem de um zumbi returna a parteDoCorpo a ser sinalizada`
+`suavizaMaNoticia` | `Randomiza modos de dar uma noticia ruim ao paciente e retorna uma delas`	
+`tratamentoSintomatico` | `Devolve um tratameneto para sintomas especificos (amenizar desconforto) ex: febre - dipirona/banho gelado`	
