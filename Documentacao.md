@@ -5,17 +5,11 @@ Campo | Valor
 Classe | `<caminho completo da classe com pacotes>` <br> Exemplo: `pt.c08componentes.s20catalog.s10ds.DataSetComponent`
 Autores | `Ana Clara Lacaze, Lucas Batista, Gabriela Resende, Maria Martins, Vinicius Dantas`
 Objetivo | `Melhorar a visualizacao do diagnostico e dos sintomas`
-Interface | `<interface em Java do componente>`
+Interface | `public interface IVisualizacao`
 ~~~
-public interface ITableProducer {
-  String[] requestAttributes();
-  String[][] requestInstances();
-}
-public interface IDataSource {
-  public String getDataSource();
-  public void setDataSource(String dataSource);
-}
-public interface IDataSet extends ITableProducer, IDataSource {
+public interface IVisualizacao {
+  String[] doencPaciente();
+  String[][] matrizDoencas();
 }
 ~~~
 
