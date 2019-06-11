@@ -25,3 +25,4 @@ Método | Objetivo
 `sinalizaSintomas` | `Conforme descobre sintomas sao sinalizdos em uma imagem de um zumbi returna a parteDoCorpo a ser sinalizada`
 `suavizaMaNoticia` | `Apresenta modos de dar uma noticia ruim ao paciente de forma mais leve`	
 `tratamentoSintomatico` | `Devolve um tratameneto para sintomas especificos (amenizar desconforto) ex: febre - dipirona/banho gelado`	
+`perguntaCompleta` | `Imprime a pergunta de forma mais completa e humana`	
