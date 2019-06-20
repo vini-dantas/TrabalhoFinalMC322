@@ -7,11 +7,9 @@ Campo | Valor
 Classe | `.principal.Quarentena.java`
 Autores | `Ana Clara Lacaze, Lucas Batista, Gabriela Resende, Maria Martins, Vinicius Dantas`
 Objetivo | `Determina se o paciente deve ou nao entrar em quarentena analisando a doenca que ele apresenta. Se a doença for altamente contagiosa imprime que o paciente deve ser levado para quarentena`
-Interface | `public interface IVisualizacao`
+Interface | `public interface IQuarentena`
 ~~~
-public interface IVisualizacao {
-  String[] doencaPaciente();
-  String[][] matrizDoencas();
+public interface IQuarentena {
 }
 ~~~
 
@@ -21,11 +19,9 @@ Campo | Valor
 Classe | `.principal.ReduzTabela.java`
 Autores | `Ana Clara Lacaze, Lucas Batista, Gabriela Resende, Maria Martins, Vinicius Dantas`
 Objetivo | `Elimina linhas conforme os sintomas analizados nao estao presentes naquelas, e analisa apenas as colunas em que os sintomas variam`
-Interface | `public interface IVisualizacao`
+Interface | `public interface IReduzTabela`
 ~~~
-public interface IVisualizacao {
-  String[] doencaPaciente();
-  String[][] matrizDoencas();
+public interface IReduzTabela {
 }
 ~~~
 
