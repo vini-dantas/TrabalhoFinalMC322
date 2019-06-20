@@ -1,10 +1,12 @@
 # Grupo `Comp017`
 
+
+## Componente `Quarentena`
 Campo | Valor
 ----- | -----
-Classe | `<caminho completo da classe com pacotes>` <br> Exemplo: `pt.c08componentes.s20catalog.s10ds.DataSetComponent`
+Classe | `.principal.Quarentena.java`
 Autores | `Ana Clara Lacaze, Lucas Batista, Gabriela Resende, Maria Martins, Vinicius Dantas`
-Objetivo | `Melhorar a visualizacao do diagnostico e dos sintomas`
+Objetivo | `Determina se o paciente deve ou nao entrar em quarentena analisando a doenca que ele apresenta. Se a doença for altamente contagiosa imprime que o paciente deve ser levado para quarentena`
 Interface | `public interface IVisualizacao`
 ~~~
 public interface IVisualizacao {
@@ -13,16 +15,55 @@ public interface IVisualizacao {
 }
 ~~~
 
-## Detalhamento das Interfaces
+## Componente `reduzTabela`
+Campo | Valor
+----- | -----
+Classe | `.principal.ReduzTabela.java`
+Autores | `Ana Clara Lacaze, Lucas Batista, Gabriela Resende, Maria Martins, Vinicius Dantas`
+Objetivo | `Elimina linhas conforme os sintomas analizados nao estao presentes naquelas, e analisa apenas as colunas em que os sintomas variam`
+Interface | `public interface IVisualizacao`
+~~~
+public interface IVisualizacao {
+  String[] doencaPaciente();
+  String[][] matrizDoencas();
+}
+~~~
 
-### Interface `IVisualizacao`
-`Melhorar a visualizacao do diagnostico e dos sintomas`.
+## Componente `suavizaMaNoticia`
+Campo | Valor
+----- | -----
+Classe | `.principal.SuavizaMaNoticia.java`
+Autores | `Ana Clara Lacaze, Lucas Batista, Gabriela Resende, Maria Martins, Vinicius Dantas`
+Objetivo | `Apresenta modos de dar o diagnostico ao paciente de forma mais leve`
+Interface | `public interface ISuavizaMaNoticia`
+~~~
+public interface ISuavizaMaNoticia {
+    void conectaSuaviza(ITableProducer suaviza);
+}
+~~~
 
-Método | Objetivo
--------| --------
-`quarentena` | `Determina se o paciente deve ou nao entrar em quarentena analisando a doenca que ele apresenta. Se a doença for altamente contagiosa returna true se nao returna false`
-`reduzTabela` | `Elimina linhas conforme os sintomas analizados nao estao presentes naquelas, e analisa apenas as colunas em que os sintomas variam`
-`sinalizaSintomas` | `Conforme descobre sintomas sao sinalizados em uma imagem de um zumbi returna a parteDoCorpo a ser sinalizada`
-`suavizaMaNoticia` | `Apresenta modos de dar uma noticia ruim ao paciente de forma mais leve`	
-`tratamentoSintomatico` | `Devolve um tratameneto para sintomas especificos (amenizar desconforto) ex: febre - dipirona/banho gelado`	
-`perguntaCompleta` | `Imprime a pergunta de forma mais completa e humana`	
+## Componente `tratamentoSintomatico`
+Campo | Valor
+----- | -----
+Classe | `.principal.TratamentoSintomatico.java`
+Autores | `Ana Clara Lacaze, Lucas Batista, Gabriela Resende, Maria Martins, Vinicius Dantas`
+Objetivo | `Devolve um tratameneto para sintomas especificos (amenizar desconforto) ex: febre - dipirona/banho gelado`
+Interface | `public interface ITratamentoSintomatico`
+~~~
+public interface ITratamentoSintomatico {
+    void conectaTratamento(ITableProducer tratamento);
+}
+~~~
+
+## Componente `perguntaCompleta`
+Campo | Valor
+----- | -----
+Classe | `.principal.PerguntaCompleta.java`
+Autores | `Ana Clara Lacaze, Lucas Batista, Gabriela Resende, Maria Martins, Vinicius Dantas`
+Objetivo | `Imprime a pergunta do sintoma de forma mais completa e humana`
+Interface | `public interface IPerguntaCompleta`
+~~~
+public interface IPerguntaCompleta {
+    void conectaPergunta(ITableProducer pergunta);
+}
+~~~
