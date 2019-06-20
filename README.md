@@ -1,4 +1,4 @@
-# Componente `IVisualizacao`
+# Grupo `Comp017`
 
 Campo | Valor
 ----- | -----
